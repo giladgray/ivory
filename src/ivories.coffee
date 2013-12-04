@@ -4,13 +4,13 @@ define ['keycodes'], (keynames) ->
 	# map field name on Event object to key display name
 	MODIFIERS = {
 		ctrlKey : 'Ctrl'
-		metaKey : 'Cmd'
+		metaKey : 'Meta'
 		altKey  : 'Alt'
 		shiftKey: 'Shift'
 	}
 
 	# keycodes for modifier keys: Shift, Ctrl, Alt, Cmd
-	MOD_CODES = [16, 17, 18, 91]
+	MOD_CODES = [16, 17, 18, 91, 93]
 
 	return (event) ->
 		# accepts event.which directly for simple key naming

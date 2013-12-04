@@ -1,7 +1,17 @@
 (function () {
 (function() {
-  define('keycode-names',[],function() {
+  define('keycodes',[],function() {
     return {
+      48: '0',
+      49: '1',
+      50: '2',
+      51: '3',
+      52: '4',
+      53: '5',
+      54: '6',
+      55: '7',
+      56: '8',
+      57: '9',
       65: 'A',
       66: 'B',
       67: 'C',
@@ -28,16 +38,6 @@
       88: 'X',
       89: 'Y',
       90: 'Z',
-      48: '0',
-      49: '1',
-      50: '2',
-      51: '3',
-      52: '4',
-      53: '5',
-      54: '6',
-      55: '7',
-      56: '8',
-      57: '9',
       96: 'Num0',
       97: 'Num1',
       98: 'Num2',
@@ -74,10 +74,10 @@
       17: 'Ctrl',
       18: 'Alt',
       91: 'Meta',
-      93: 'Meta_RIGHT',
+      93: 'Meta',
       20: 'Caps Lock',
       27: 'Esc',
-      32: 'Spacebar',
+      32: 'Space',
       33: 'Page Up',
       34: 'Page Down',
       35: 'End',
@@ -90,7 +90,7 @@
       46: 'Delete',
       144: 'Num Lock',
       145: 'ScrLk',
-      19: 'Pause/Break',
+      19: 'Pause',
       186: ';',
       187: '=',
       188: ',',
@@ -110,15 +110,15 @@
 (function() {
   var __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
-  define('ivories',['keycode-names'], function(keynames) {
+  define('ivories',['keycodes'], function(keynames) {
     var MODIFIERS, MOD_CODES;
     MODIFIERS = {
       ctrlKey: 'Ctrl',
-      metaKey: 'Cmd',
+      metaKey: 'Meta',
       altKey: 'Alt',
       shiftKey: 'Shift'
     };
-    MOD_CODES = [16, 17, 18, 91];
+    MOD_CODES = [16, 17, 18, 91, 93];
     return function(event) {
       var modKey, mods, name, _ref;
       if (typeof event === 'number') {
