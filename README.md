@@ -7,13 +7,14 @@ A simple, elegant, flexible library for JavaScript key events.
 
 Ivories.js provides for two primary use cases:
 
-1. a function to convert a KeyEvent to a friendly readable string, such as `Ctrl+N` or `Alt+Shift+Tab`.
+1) a function to convert a KeyEvent to a friendly readable string, such as `Ctrl+N` or `Alt+Shift+Tab`.
 
 ```
 > ivories.tickle(event)
   Cmd+Space
 ```
-2. a mixin object for Backbone.View (or other similar frameworks) to enable binding to key events as easy as pie.
+
+2) a mixin object for Backbone.View (or other similar frameworks) to enable binding to key events as easy as pie.
 
 ```javascript
 MyView = Backbone.View.extend(ivories)
