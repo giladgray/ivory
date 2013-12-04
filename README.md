@@ -10,8 +10,8 @@ Ivories.js provides for two primary use cases:
 1. a function to convert a KeyEvent to a friendly readable string, such as `Ctrl+N` or `Alt+Shift+Tab`.
 
 ```
-$ ivories.tickle(event)
-Ctrl+N
+> ivories.tickle(event)
+  Cmd+Space
 ```
 2. a mixin object for Backbone.View (or other similar frameworks) to enable binding to key events as easy as pie.
 
@@ -27,16 +27,23 @@ MyView.changeTab = function(...) { ... }
 
 ## Usage
 
-Simply install it from bower, add it to your app's config file, and require it in a [RequireJS](http://requirejs.org) `define()` call and use as above.
+```bash
+# 1. Install from bower
+$ bower install ivories --save
+```
 
 ```javascript
+// 2. add to require config
 require.config({
   paths: {
     ...
     'ivories' : '../bower_components/ivories/ivories'
   }
 })
+```
 
+```javascript
+// 3. require in a module
 define(['ivories'], function (ivories) {
   // your magic here
 }
