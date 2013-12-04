@@ -62,7 +62,7 @@ module.exports = (grunt) ->
         # Options: https://github.com/jrburke/r.js/blob/master/build/example.build.js
         options:
           name: 'ivories'
-          out: 'ivories.min.js'
+          out: 'ivories.js'
           # `name` and `out` is set by grunt-usemin
           # because of coffee-script, we'll have requirejs compile from .tmp folder
           baseUrl: ".tmp"
