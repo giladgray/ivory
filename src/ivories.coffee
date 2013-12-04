@@ -1,4 +1,4 @@
-define ['keycode-names'], (keynames) ->
+define ['keycodes'], (keynames) ->
 	# window.KEYS = true
 
 	# map field name on Event object to key display name
