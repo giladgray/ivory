@@ -1,0 +1,28 @@
+{
+  "name": "ivories",
+  "version": "0.0.0",
+  "homepage": "https://github.com/giladgray/ivories",
+  "authors": [
+    "Gilad Gray <giladgray@gmail.com>"
+  ],
+  "description": "simple flexible key event handling. make thoese keys dance!",
+  "main": "ivories.js",
+  "keywords": [
+    "javascript",
+    "key",
+    "event",
+    "keydown",
+    "keyup",
+    "keypress",
+    "keycode",
+    "keyname"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

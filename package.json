@@ -1,0 +1,46 @@
+{
+  "name": "ivories",
+  "version": "0.0.0",
+  "description": "make those keys dance! simple, flexible key event handling",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/giladgray/ivories.git"
+  },
+  "keywords": [
+    "javascript",
+    "key",
+    "keys",
+    "event",
+    "keydown",
+    "keyup",
+    "keypress",
+    "keycode",
+    "keyname"
+  ],
+  "author": "Gilad Gray",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "86e2efcf67dfcaae6d02e6feef0deab0b617d358",
+  "bugs": {
+    "url": "https://github.com/giladgray/ivories/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-bower-requirejs": "~0.4.1",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-coffee": "~0.6.5",
+    "grunt-contrib-concat": "~0.1.3",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-jshint": "~0.4.1",
+    "grunt-contrib-requirejs": "~0.4.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt-mocha": "~0.3.0",
+    "grunt-symlink": "~0.4.0",
+    "matchdep": "~0.3.0"
+  }
+}
