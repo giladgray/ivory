@@ -1,8 +1,8 @@
 {
-  "name": "ivories",
+  "name": "ivory",
   "version": "0.0.0",
   "description": "make those keys dance! simple, flexible key event handling",
-  "main": "index.coffee",
+  "main": "src/ivory.coffee",
   "scripts": {
     "test": "grunt test"
   },

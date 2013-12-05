@@ -1,12 +1,12 @@
 {
-  "name": "ivories",
+  "name": "ivory",
   "version": "0.0.0",
   "homepage": "https://github.com/giladgray/ivories",
   "authors": [
     "Gilad Gray <giladgray@gmail.com>"
   ],
   "description": "simple flexible key event handling. make thoese keys dance!",
-  "main": "ivories.js",
+  "main": "src/ivory.coffee",
   "keywords": [
     "javascript",
     "key",

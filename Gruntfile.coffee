@@ -43,8 +43,8 @@ module.exports = (grunt) ->
 
         # Options: https://github.com/jrburke/r.js/blob/master/build/example.build.js
         options:
-          name: 'ivories'
-          out: 'ivories.js'
+          name: 'ivory'
+          out: 'ivory.js'
           optimize: "none"
 
           # because of coffee-script, we'll have requirejs compile from .tmp folder
@@ -59,7 +59,7 @@ module.exports = (grunt) ->
           # http://requirejs.org/docs/errors.html#sourcemapcomments
           preserveLicenseComments: false
           useStrict: true
-          wrap: true
+          wrap: false
 
     mocha:
       all:
