@@ -1,4 +1,4 @@
-ivories.js
+Ivory
 ==========
 A simple, elegant, flexible library for JavaScript key events.
 > Make them keys dance!
