@@ -1,6 +1,6 @@
 {
   "name": "ivory",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "make those keys dance! simple, flexible key event handling",
   "main": "src/ivory.coffee",
   "scripts": {
