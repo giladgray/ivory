@@ -1,6 +1,4 @@
 define ['keystring'], (tickle) ->
-	window.KEYS = true
-
 	# Event handler for a KeyEvent
 	keypress = (event) ->
 		# Event action is keyed either by exact keystring or by generic keyname
