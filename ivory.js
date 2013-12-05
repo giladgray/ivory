@@ -157,7 +157,9 @@
       if (window.KEYS) {
         console.log(keystring, action);
       }
-      if (action) {
+      if (keystring === 'Esc') {
+        return $(':focus').blur();
+      } else if (action && _.isEmpty($(':focus').get())) {
         event.preventDefault();
         if (this[action]) {
           action = this[action];

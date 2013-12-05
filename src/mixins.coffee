@@ -21,11 +21,11 @@ define ['keystring'], (tickle) ->
 		action    = @keyEvents[keystring] or @keyEvents[keyname]
 		# quick debug option, in case you want to see keys
 		if window.KEYS then console.log keystring, action
-		# escape to deselect whatever is focused (generally URL bar)
-		# if keystring is 'Esc' then $(':focus').blur()
+		# escape to deselect whatever is focused (generally input or text field)
+		# TODO: is this behavior final? user-configurable?
+		if keystring is 'Esc' then $(':focus').blur()
 		# keys only happen when nothing is focused, because they're useful in inputs and forms
-		# else if action and _.isEmpty $(':focus').get()
-		if action
+		else if action and _.isEmpty $(':focus').get()
 			event.preventDefault()
 			# if the action is the name of a function here then call it
 			if @[action] then action = @[action]
@@ -37,6 +37,7 @@ define ['keystring'], (tickle) ->
 			else @$(action).click()
 
 	return {
+		# a 'constructor' and 'destructor' for key event bindings
 		setupIvory    : -> $('body').on 'keydown.ivory', (e) => @keypress(e)
 		teardownIvory : -> $('body').off 'keydown.ivory'
 		keypress
