@@ -1,6 +1,7 @@
-define ['keystring', 'mixins'], (tickle, mixins) ->
+define ['keystring', 'mixins'], (keystring, mixins) ->
+	# parent object with mixins, keystring, tickle alias
 	return {
 		mixins
-		tickle
-		keystring: tickle
+		keystring
+		tickle: keystring
 	}

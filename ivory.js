@@ -186,11 +186,11 @@
 }).call(this);
 
 (function() {
-  define('ivory',['keystring', 'mixins'], function(tickle, mixins) {
+  define('ivory',['keystring', 'mixins'], function(keystring, mixins) {
     return {
       mixins: mixins,
-      tickle: tickle,
-      keystring: tickle
+      keystring: keystring,
+      tickle: keystring
     };
   });
 

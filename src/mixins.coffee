@@ -1,7 +1,7 @@
 define ['keystring'], (tickle) ->
-	# window.ivories = ivories
 	window.KEYS = true
 
+	# Event handler for a KeyEvent
 	keypress = (event) ->
 		# Event action is keyed either by exact keystring or by generic keyname
 		# "+key" that matches key with any combo of modifiers (including none).
@@ -36,16 +36,8 @@ define ['keystring'], (tickle) ->
 			# TODO: perform generic events on target
 			else @$(action).click()
 
-	# class BaseView extends Backbone.View
 	return {
-		# separate these functions from Backbone ones so they can be called anywhere...
 		setupIvory    : -> $('body').on 'keydown.ivory', (e) => @keypress(e)
 		teardownIvory : -> $('body').off 'keydown.ivory'
 		keypress
-
-		# ...but bind to standard Backbone functions so you don't have to.
-		# set disableKeys flag to true on the View to prevent auto-binding.
-		# initialize: -> @setup() unless @disableKeys
-		# remove: -> @teardown()
-
 	}
