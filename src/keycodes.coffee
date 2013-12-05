@@ -1,4 +1,5 @@
 define ->
+	# mapping of key code to key name
 	return {
 		48  : '0'
 		49  : '1'
