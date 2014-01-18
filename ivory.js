@@ -146,9 +146,10 @@
 }).call(this);
 
 (function() {
+  var __slice = [].slice;
+
   define('mixins',['keystring'], function(tickle) {
-    var keypress;
-    window.KEYS = true;
+    var keypress, namespace;
     keypress = function(event) {
       var action, keyname, keystring;
       keystring = tickle(event);
@@ -171,15 +172,24 @@
         }
       }
     };
+    namespace = function() {
+      var ns;
+      ns = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
+      return "keydown.ivory-" + (ns.join('-'));
+    };
     return {
       setupIvory: function() {
-        var _this = this;
-        return $('body').on('keydown.ivory', function(e) {
+        var ns,
+          _this = this;
+        ns = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
+        return $('body').on(namespace(ns), function(e) {
           return _this.keypress(e);
         });
       },
       teardownIvory: function() {
-        return $('body').off('keydown.ivory');
+        var ns;
+        ns = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
+        return $('body').off(namespace(ns));
       },
       keypress: keypress
     };

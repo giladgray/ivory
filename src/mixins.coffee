@@ -34,9 +34,13 @@ define ['keystring'], (tickle) ->
 			# TODO: perform generic events on target
 			else @$(action).click()
 
+	namespace = (ns...) -> "keydown.ivory-#{ns.join('-')}"
+
 	return {
 		# a 'constructor' and 'destructor' for key event bindings
-		setupIvory    : -> $('body').on 'keydown.ivory', (e) => @keypress(e)
-		teardownIvory : -> $('body').off 'keydown.ivory'
+		setupIvory    : (ns...) ->
+			$('body').on  namespace(ns), (e) => @keypress(e)
+		teardownIvory : (ns...) ->
+			$('body').off namespace(ns)
 		keypress
 	}
